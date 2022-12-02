@@ -38,4 +38,4 @@ app.get('/login', (req, res) => {
 });
 
 
-app.listen(PORT, () => console.log(`Servidor corriendo en puerto: http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en: http://localhost:${PORT}`));
