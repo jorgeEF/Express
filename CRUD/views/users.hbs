@@ -1,0 +1,38 @@
+<h1>{{title}}</h1>
+<form class="row d-flex gap-1" role="search" method="get">  
+    <input class="col form-control ms-3" type="search" placeholder="id..." aria-label="Search" id="id" name="id">
+    <button class="col btn btn-primary text-center" type="submit">Buscar</button>
+    <a class="col btn btn-outline-secondary text-center" href="/users">Limpiar</a>
+    <div class="col-4"></div>
+    <a class="col-3 btn btn-success me-3" href="/users/create/">Crear Nuevo Usuario</a>
+    
+</form>
+
+<table class="table table-light table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Gestión</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+        <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.nombre}}</td>
+            <td>{{this.apellido}}</td>
+            <td class="d-flex gap-1 justify-content-center">
+              <a href="/users/edit/{{this.id}}" class="btn btn-sm btn-warning">Editar</a>
+
+              <form action="/users/delete/{{this.id}}" method="POST">
+                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Seguro desea eliminar el usuario?')">Eliminar</button>
+              </form>
+            </td>
+        </tr>
+    {{/each}}</p>    
+  </tbody>
+</table>
+
+

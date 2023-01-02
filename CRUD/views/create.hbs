@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<div class="container w-50">
+      <form method="POST">
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa el nombre..." required autocomplete="off">
+            </div>
+            <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa el apellido..." required autocomplete="off">
+            </div>
+            <a href="/users" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-success">Crear Usuario</button>
+      </form>
+</div>

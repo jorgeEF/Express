@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<div class="container w-50">
+      
+      {{#each user}}
+      <form method="POST">
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="{{this.nombre}}" required autocomplete="off">
+            </div>
+            <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" value="{{this.apellido}}" required autocomplete="off">
+            </div>
+            <a href="/users" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-warning" onclick="return confirm('Confirmar edición de usuario?')">Editar Usuario</button>
+
+      </form>
+      {{/each}}
+</div>
